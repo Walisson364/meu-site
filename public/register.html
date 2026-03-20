@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Cadastro</title>
+<link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body class="auth-page">
+
+<header class="header">
+  <div class="logo">📖 Estudo Bíblico</div>
+
+  <nav class="nav">
+    <a href="index.html">Início</a>
+    <a href="login.html">Entrar</a>
+  </nav>
+</header>
+
+<div class="page-center">
+  <div class="auth-container">
+
+    <h2>Criar Conta</h2>
+
+    <form id="registerForm">
+
+      <div class="input-group">
+        <label>Nome</label>
+        <input type="text" id="nome" required>
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="input-group">
+        <label>Senha</label>
+        <input type="password" id="senha" required>
+      </div>
+
+      <button class="auth-btn">Cadastrar</button>
+
+    </form>
+
+    <div class="auth-link">
+      Já possui conta? <a href="login.html">Entrar</a>
+    </div>
+
+  </div>
+</div>
+<script src="./js/authGuard.js"></script>
+<script src="js/api.js"></script>
+<script src="./js/toast.js"></script>
+<script src="js/register.js"></script>
+
+<div id="toast-container"></div>
+</body>
+</html>

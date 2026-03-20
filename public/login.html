@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body class="auth-page">
+
+<header class="header">
+  <div class="logo">📖 Estudo Bíblico</div>
+
+  <nav class="nav">
+    <a href="index.html">Início</a>
+    <a href="register.html">Cadastrar</a>
+  </nav>
+</header>
+
+<div class="page-center">
+  <div class="auth-container">
+
+    <h2>Entrar</h2>
+
+    <form id="loginForm">
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="input-group">
+        <label>Senha</label>
+        <input type="password" id="senha" required>
+      </div>
+
+      <button class="auth-btn">Entrar</button>
+
+    </form>
+
+    <div class="auth-link">
+      Não tem conta? <a href="register.html">Criar conta</a>
+    </div>
+
+  </div>
+</div>
+<script src="./js/authGuard.js"></script>
+<script src="js/api.js"></script>
+<script src="./js/toast.js"></script>
+<script src="js/login.js"></script>
+
+<div id="toast-container"></div>
+</body>
+</html>

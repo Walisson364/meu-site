@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bíblia Estudo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="header">
+  <div class="logo">
+    📖 Palavra Viva
+  </div>
+
+  <nav class="nav" id="navMenu">
+    <a href="index.html">Início</a>
+    <a href="#favoritos">Favoritos</a>
+
+    <!-- conteúdo dinâmico -->
+    <span id="userArea"></span>
+  </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <h1>Gerador de Estudos Bíblicos</h1>
+    <p>Crie um estudo bíblico personalizado para você</p>
+</section>
+
+
+<!-- ================= CONTEÚDO ================= -->
+<main>
+
+    <!-- CONFIGURAÇÕES -->
+    <section class="config">
+
+        <div class="grupo tema">
+            <h3>Escolha o Tema</h3>
+            <div class="botoes">
+                <button type="button">Fé</button>
+                <button type="button">Ansiedade</button>
+                <button type="button">Perdão</button>
+                <button type="button">Propósito</button>
+            </div>
+        </div>
+
+        <div class="grupo tempo">
+            <h3>Tempo de Estudo</h3>
+            <div class="botoes">
+                <button type="button">5 Min</button>
+                <button type="button">10 Min</button>
+                <button type="button">20 Min</button>
+            </div>
+        </div>
+
+        <div class="grupo nivel">
+            <h3>Seu Nível</h3>
+            <div class="botoes">
+                <button type="button">Iniciante</button>
+                <button type="button">Intermediário</button>
+                <button type="button">Avançado</button>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- AÇÃO -->
+    <section class="acao">
+        <button class="gerar" type="button">
+            Gerar Estudo
+        </button>
+    </section>
+
+
+    <p class="loading" style="display:none;">
+        Gerando estudo...
+    </p>
+
+
+    <!-- RESULTADO -->
+    <section class="resultado" style="display:none;">
+
+        <h2>Seu Estudo Bíblico</h2>
+
+        <div class="skeleton-card" id="skeleton" style="display:none;">
+            <div class="skeleton linha grande"></div>
+            <div class="skeleton linha"></div>
+            <div class="skeleton linha"></div>
+            <div class="skeleton linha media"></div>
+        </div>
+
+        <article class="card-estudo">
+
+            <h3>Versículo do Dia</h3>
+            <p id="versiculo"></p>
+
+            <h3>Reflexão</h3>
+            <p id="reflexao"></p>
+
+            <h3>Pergunta para Meditar</h3>
+            <p id="pergunta"></p>
+
+            <h3>Oração Sugerida</h3>
+            <p id="oracao"></p>
+
+            <button id="salvarFavorito">
+                🤍 Salvar nos Favoritos
+            </button>
+
+            <button class="ver-favoritos">
+                Ver Favoritos ⭐
+            </button>
+
+        </article>
+
+    </section>
+
+
+    <!-- FAVORITOS -->
+    <section id="favoritos" class="lista-favoritos" style="display:none;">
+        <h3>Seus Favoritos</h3>
+        <div id="favoritos-container"></div>
+    </section>
+
+</main>
+
+
+<!-- ================= SCRIPTS ================= -->
+<!-- ORDEM IMPORTA -->
+
+<script src="js/authGuard.js"></script>
+<script src="js/api.js"></script>
+<script src="js/header.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/store.js"></script>
+<script src="js/script.js"></script>
+
+<div id="toast-container"></div>
+
+</body>
+</html>
