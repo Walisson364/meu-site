@@ -1,59 +1,44 @@
-const sqlite3 = require("sqlite3").verbose();
+const Database = require("better-sqlite3");
 const path = require("path");
 
 const dbPath = path.resolve(__dirname, "biblia.db");
 
-const db = new sqlite3.Database(dbPath, (err) => {
-  if (err) {
-    console.error("❌ Erro ao abrir banco:", err.message);
-  } else {
-    console.log("✅ Banco conectado!");
-  }
-});
+// cria/conecta banco
+const db = new Database(dbPath);
 
-// garante execução em ordem
-db.serialize(() => {
+console.log("✅ Banco conectado!");
 
-  console.log("🔧 Verificando tabelas...");
+// ================= TABELAS
+db.exec(`
+  CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    senha TEXT NOT NULL
+  );
 
-  // ================= USERS
-  db.run(`
-    CREATE TABLE IF NOT EXISTS users (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      nome TEXT NOT NULL,
-      email TEXT UNIQUE NOT NULL,
-      senha TEXT NOT NULL
-    )
-  `);
+  CREATE TABLE IF NOT EXISTS estudos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    tema TEXT NOT NULL,
+    nivel TEXT NOT NULL,
+    versiculo TEXT NOT NULL,
+    reflexao TEXT NOT NULL,
+    pergunta TEXT NOT NULL,
+    oracao TEXT NOT NULL
+  );
 
-  // ================= ESTUDOS
-  db.run(`
-    CREATE TABLE IF NOT EXISTS estudos (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      tema TEXT NOT NULL,
-      nivel TEXT NOT NULL,
-      versiculo TEXT NOT NULL,
-      reflexao TEXT NOT NULL,
-      pergunta TEXT NOT NULL,
-      oracao TEXT NOT NULL
-    )
-  `);
+  CREATE TABLE IF NOT EXISTS favoritos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    tema TEXT,
+    versiculo TEXT,
+    reflexao TEXT,
+    pergunta TEXT,
+    oracao TEXT,
+    UNIQUE(user_id, versiculo)
+  );
+`);
 
-  // ================= FAVORITOS
-  db.run(`
-    CREATE TABLE IF NOT EXISTS favoritos (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      user_id INTEGER,
-      tema TEXT,
-      versiculo TEXT,
-      reflexao TEXT,
-      pergunta TEXT,
-      oracao TEXT,
-      UNIQUE(user_id, versiculo)
-    )
-  `);
-
-  console.log("✅ Tabelas prontas");
-});
+console.log("✅ Tabelas prontas");
 
 module.exports = db;
