@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-const API = "http://localhost:3000";
+const API_URL = "https://meu-site-ergx.onrender.com";
 const form = document.getElementById("registerForm");
 
 form.addEventListener("submit", async (e) => {

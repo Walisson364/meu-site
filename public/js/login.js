@@ -1,4 +1,4 @@
-const API = "http://localhost:3000";
+const API_URL = "https://meu-site-ergx.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
 
