@@ -6,7 +6,7 @@ const estudoRoutes = require("./routes/estudosRoutes");
 const favoritosRoutes = require("./routes/favoritosRoutes");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 // ===============================
@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // ⭐ FALTAVA ISSO
 
 app.use(cors({
-  origin: "http://127.0.0.1:5500",
+  origin: "*",
   methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
