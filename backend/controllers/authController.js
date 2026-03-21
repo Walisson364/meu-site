@@ -23,43 +23,37 @@ exports.register = (req, res) => {
 
   try {
 
-    // cria hash da senha
+    // hash da senha
     const hash = bcrypt.hashSync(senha, 10);
 
-    db.run(
-      "INSERT INTO users (nome, email, senha) VALUES (?, ?, ?)",
-      [nome, email, hash],
-      function (err) {
-
-        if (err) {
-          console.log("ERRO REGISTER:", err);
-          return res.status(400).json({
-            erro: "Email já cadastrado"
-          });
-        }
-
-        // cria token JWT
-        const token = jwt.sign(
-          {
-            id: this.lastID,
-            nome: nome
-          },
-          SECRET,
-          { expiresIn: "7d" }
-        );
-
-        return res.json({
-          mensagem: "Conta criada ✅",
-          token
-        });
-      }
+    // 🔥 INSERT com better-sqlite3
+    const stmt = db.prepare(
+      "INSERT INTO users (nome, email, senha) VALUES (?, ?, ?)"
     );
 
-  } catch (error) {
-    console.log("ERRO GERAL REGISTER:", error);
+    const result = stmt.run(nome, email, hash);
 
-    res.status(500).json({
-      erro: "Erro interno do servidor"
+    // cria token
+    const token = jwt.sign(
+      {
+        id: result.lastInsertRowid,
+        nome: nome
+      },
+      SECRET,
+      { expiresIn: "7d" }
+    );
+
+    return res.json({
+      mensagem: "Conta criada ✅",
+      token
+    });
+
+  } catch (error) {
+
+    console.log("ERRO REGISTER:", error);
+
+    return res.status(400).json({
+      erro: "Email já cadastrado"
     });
   }
 };
@@ -80,50 +74,54 @@ exports.login = (req, res) => {
     });
   }
 
-  db.get(
-    "SELECT * FROM users WHERE email = ?",
-    [email],
-    (err, user) => {
+  try {
 
-      if (err) {
-        console.log("ERRO DB:", err);
-        return res.status(500).json({
-          erro: "Erro no servidor"
-        });
-      }
+    // 🔥 SELECT com better-sqlite3
+    const stmt = db.prepare(
+      "SELECT * FROM users WHERE email = ?"
+    );
 
-      if (!user) {
-        return res.status(404).json({
-          erro: "Usuário não encontrado"
-        });
-      }
+    const user = stmt.get(email);
 
-      // verifica senha
-      const senhaValida = bcrypt.compareSync(
-        senha,
-        user.senha
-      );
-
-      if (!senhaValida) {
-        return res.status(401).json({
-          erro: "Senha incorreta"
-        });
-      }
-
-      // cria token JWT
-      const token = jwt.sign(
-        {
-          id: user.id,
-          nome: user.nome
-        },
-        SECRET,
-        { expiresIn: "7d" }
-      );
-
-      res.json({
-        mensagem: "Login realizado ✅",
-        token
+    if (!user) {
+      return res.status(404).json({
+        erro: "Usuário não encontrado"
       });
     }
-  );
+
+    // verifica senha
+    const senhaValida = bcrypt.compareSync(
+      senha,
+      user.senha
+    );
+
+    if (!senhaValida) {
+      return res.status(401).json({
+        erro: "Senha incorreta"
+      });
+    }
+
+    // cria token
+    const token = jwt.sign(
+      {
+        id: user.id,
+        nome: user.nome
+      },
+      SECRET,
+      { expiresIn: "7d" }
+    );
+
+    return res.json({
+      mensagem: "Login realizado ✅",
+      token
+    });
+
+  } catch (error) {
+
+    console.log("ERRO LOGIN:", error);
+
+    return res.status(500).json({
+      erro: "Erro interno do servidor"
+    });
+  }
 };
