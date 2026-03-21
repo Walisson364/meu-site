@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById("loginForm");
 
-  // evita erro se o script carregar em outra página
+  // evita erro se não estiver na página de login
   if (!form) return;
 
   form.addEventListener("submit", async (e) => {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const resposta = await fetch(`${API}/auth/login`, {
+      const resposta = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // ✅ salva token
+      // 🔥 salva token
       localStorage.setItem("token", dados.token);
 
-      // ✅ redireciona direto (não precisa setTimeout)
+      // 🔥 redireciona
       window.location.href = "index.html";
 
     } catch (erro) {
