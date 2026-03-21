@@ -41,4 +41,14 @@ db.exec(`
 
 console.log("✅ Tabelas prontas");
 
+// 🔥 ADICIONA A COLUNA SE NÃO EXISTIR
+try {
+  db.prepare(`
+    ALTER TABLE users ADD COLUMN estudos_vistos TEXT
+  `).run();
+  console.log("✅ Coluna estudos_vistos criada");
+} catch (e) {
+  console.log("⚠️ Coluna estudos_vistos já existe");
+}
+
 module.exports = db;
