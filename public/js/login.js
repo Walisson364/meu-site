@@ -1,5 +1,3 @@
-const API_URL = "https://meu-site-ergx.onrender.com";
-
 document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById("loginForm");
