@@ -3,37 +3,35 @@ const router = express.Router();
 const db = require("../database/db");
 const auth = require("../middleware/authMiddleware");
 
-
 // ===============================
 // SALVAR FAVORITO
 // ===============================
 router.post("/", auth, (req, res) => {
 
-  const user_id = req.user.id; // ⭐ vem do JWT
+  const user_id = req.user.id;
   const { tema, versiculo, reflexao, pergunta, oracao } = req.body;
 
-  const sql = `
-    INSERT INTO favoritos
-    (user_id, tema, versiculo, reflexao, pergunta, oracao)
-    VALUES (?, ?, ?, ?, ?, ?)
-  `;
+  try {
 
-  db.run(
-    sql,
-    [user_id, tema, versiculo, reflexao, pergunta, oracao],
-    function(err){
+    const stmt = db.prepare(`
+      INSERT INTO favoritos
+      (user_id, tema, versiculo, reflexao, pergunta, oracao)
+      VALUES (?, ?, ?, ?, ?, ?)
+    `);
 
-      if(err){
-        console.error(err);
-        return res.status(500).json({ erro: err.message });
-      }
+    const result = stmt.run(
+      user_id, tema, versiculo, reflexao, pergunta, oracao
+    );
 
-      res.json({
-        favoritado: true,
-        id: this.lastID
-      });
-    }
-  );
+    res.json({
+      favoritado: true,
+      id: result.lastInsertRowid
+    });
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ erro: err.message });
+  }
 });
 
 
@@ -44,19 +42,18 @@ router.get("/", auth, (req, res) => {
 
   const user_id = req.user.id;
 
-  db.all(
-    "SELECT * FROM favoritos WHERE user_id = ?",
-    [user_id],
-    (err, rows) => {
+  try {
 
-      if(err){
-        console.error(err);
-        return res.status(500).json({ erro: err.message });
-      }
+    const rows = db
+      .prepare("SELECT * FROM favoritos WHERE user_id = ?")
+      .all(user_id);
 
-      res.json(rows);
-    }
-  );
+    res.json(rows);
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ erro: err.message });
+  }
 });
 
 
@@ -68,19 +65,18 @@ router.delete("/:id", auth, (req, res) => {
   const user_id = req.user.id;
   const { id } = req.params;
 
-  db.run(
-    "DELETE FROM favoritos WHERE id = ? AND user_id = ?",
-    [id, user_id],
-    function(err){
+  try {
 
-      if(err){
-        console.error(err);
-        return res.status(500).json({ erro: "Erro ao excluir" });
-      }
+    db.prepare(
+      "DELETE FROM favoritos WHERE id = ? AND user_id = ?"
+    ).run(id, user_id);
 
-      res.json({ mensagem: "Favorito removido ✅" });
-    }
-  );
+    res.json({ mensagem: "Favorito removido ✅" });
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ erro: "Erro ao excluir" });
+  }
 });
 
 
@@ -92,19 +88,18 @@ router.get("/check/:versiculo", auth, (req, res) => {
   const user_id = req.user.id;
   const versiculo = req.params.versiculo;
 
-  db.get(
-    "SELECT id FROM favoritos WHERE versiculo = ? AND user_id = ?",
-    [versiculo, user_id],
-    (err, row) => {
+  try {
 
-      if(err){
-        console.error(err);
-        return res.status(500).json({ erro: err.message });
-      }
+    const row = db.prepare(
+      "SELECT id FROM favoritos WHERE versiculo = ? AND user_id = ?"
+    ).get(versiculo, user_id);
 
-      res.json({ salvo: !!row });
-    }
-  );
+    res.json({ salvo: !!row });
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ erro: err.message });
+  }
 });
 
 module.exports = router;
