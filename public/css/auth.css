@@ -1,9 +1,9 @@
-/* RESET */
+/* ================= RESET ================= */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 body{
@@ -12,15 +12,69 @@ body{
   color:white;
 }
 
-/* CARD CENTRAL */
+
+/* ================= HEADER ================= */
+.header{
+  width:100%;
+  height:70px;
+  background:rgba(2,6,23,0.9);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:0 20px;
+}
+
+.logo{
+  font-weight:bold;
+  font-size:18px;
+  color:#22c55e;
+}
+
+.nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:15px;
+  font-size:14px;
+  transition:.2s;
+}
+
+.nav a:hover{
+  color:#22c55e;
+}
+
+
+/* ================= CENTRALIZA ================= */
+.page-center{
+  height:calc(100vh - 70px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+
+/* ================= CARD ================= */
 .auth-container{
   width:100%;
-  max-width:380px;
-  background:#0b1220;
+  max-width:400px;
+
+  background:rgba(15,23,42,0.95);
+  backdrop-filter:blur(10px);
+
   padding:35px;
-  border-radius:14px;
-  box-shadow:0 0 25px rgba(0,0,0,0.6);
-  animation:fade 0.6s ease;
+  border-radius:16px;
+
+  border:1px solid rgba(255,255,255,0.05);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.6),
+    inset 0 0 0 1px rgba(255,255,255,0.03);
+
+  animation:fade .5s ease;
 }
 
 @keyframes fade{
@@ -38,15 +92,17 @@ body{
   text-align:center;
   margin-bottom:25px;
   font-weight:600;
+  font-size:22px;
 }
 
-/* INPUTS */
+
+/* ================= INPUTS ================= */
 .input-group{
   margin-bottom:18px;
 }
 
 .input-group label{
-  font-size:14px;
+  font-size:13px;
   opacity:0.8;
 }
 
@@ -54,99 +110,88 @@ body{
   width:100%;
   margin-top:6px;
   padding:12px;
-  border:none;
-  border-radius:8px;
+
+  border-radius:10px;
+  border:1px solid #1e293b;
+
   background:#020617;
   color:white;
+
   outline:none;
-  border:1px solid #1e293b;
+  transition:.2s;
 }
 
 .input-group input:focus{
-  border:1px solid #22c55e;
+  border-color:#22c55e;
+  box-shadow:0 0 0 2px rgba(34,197,94,0.2);
 }
 
-/* BOTÃO */
+
+/* ================= BOTÃO ================= */
 .auth-btn{
   width:100%;
-  padding:12px;
+  padding:13px;
+
   border:none;
-  border-radius:8px;
-  background:#22c55e;
+  border-radius:10px;
+
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+
   color:white;
   font-weight:bold;
+
   cursor:pointer;
-  transition:0.25s;
+  transition:.25s;
 }
 
 .auth-btn:hover{
-  background:#16a34a;
-  transform:translateY(-1px);
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(34,197,94,0.4);
 }
 
-/* LINK */
+.auth-btn:active{
+  transform:scale(0.97);
+}
+
+
+/* ================= LINK ================= */
 .auth-link{
   text-align:center;
   margin-top:18px;
   font-size:14px;
+  opacity:0.8;
 }
 
 .auth-link a{
   color:#22c55e;
   text-decoration:none;
+  font-weight:500;
 }
 
 .auth-link a:hover{
   text-decoration:underline;
 }
 
-/* ================= HEADER ================= */
 
-.header{
-  width:100%;
-  height:70px;
-  background:#020617;
-  border-bottom:1px solid #1e293b;
+/* ================= RESPONSIVO ================= */
+@media (max-width:480px){
 
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  .header{
+    padding:0 15px;
+  }
 
-  padding:0 40px;
-}
+  .nav a{
+    font-size:12px;
+    margin-left:10px;
+  }
 
-.logo{
-  font-weight:bold;
-  font-size:18px;
-  color:#22c55e;
-}
+  .auth-container{
+    padding:25px;
+    border-radius:12px;
+  }
 
-.nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:20px;
-  transition:.2s;
-}
+  .auth-container h2{
+    font-size:18px;
+  }
 
-.nav a:hover{
-  color:#22c55e;
-}
-
-/* CENTRALIZA A PÁGINA ABAIXO DO HEADER */
-
-.page-center{
-  height:calc(100vh - 70px);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-body {
-  padding: 10px;
-}
-
-.card {
-  width: 100%;
-  max-width: 350px;
-  margin: auto;
 }
