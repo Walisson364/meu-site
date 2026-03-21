@@ -3,135 +3,351 @@
     "tema": "Fé",
     "nivel": "Iniciante",
     "versiculo": "Hebreus 11:1",
-    "texto": "Ora, a fé é a certeza daquilo que esperamos e a prova das coisas que não vemos.",
-    "reflexao": "Deus nos ensina sobre fé através da Sua Palavra. Pequenos passos de fé transformam nossa caminhada.",
-    "pergunta": "Como você pode viver fé de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver fé diariamente segundo a Tua vontade."
+    "texto": "A fé é a certeza daquilo que esperamos...",
+    "reflexao": "A fé começa com pequenos passos de confiança em Deus.",
+    "pergunta": "O que está desafiando sua fé neste momento?",
+    "oracao": "Senhor, fortalece minha fé todos os dias."
   },
   {
     "tema": "Fé",
     "nivel": "Intermediário",
     "versiculo": "Hebreus 11:1",
-    "texto": "Ora, a fé é a certeza daquilo que esperamos e a prova das coisas que não vemos.",
-    "reflexao": "O crescimento espiritual exige prática diária de fé. Deus trabalha em nós mesmo nas dificuldades.",
-    "pergunta": "Como você pode viver fé de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver fé diariamente segundo a Tua vontade."
+    "texto": "A fé é a certeza daquilo que esperamos...",
+    "reflexao": "A fé cresce quando confiamos em Deus nas dificuldades.",
+    "pergunta": "Onde você precisa confiar mais em Deus hoje?",
+    "oracao": "Pai, aumenta minha fé nas dificuldades."
   },
   {
     "tema": "Fé",
     "nivel": "Avançado",
     "versiculo": "Hebreus 11:1",
-    "texto": "Ora, a fé é a certeza daquilo que esperamos e a prova das coisas que não vemos.",
-    "reflexao": "A maturidade espiritual revela que fé não depende das circunstâncias, mas da confiança constante em Deus.",
-    "pergunta": "Como você pode viver fé de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver fé diariamente segundo a Tua vontade."
+    "texto": "A fé é a certeza daquilo que esperamos...",
+    "reflexao": "Confiar em Deus acima de tudo revela maturidade espiritual.",
+    "pergunta": "Onde você precisa confiar mais em Deus hoje?",
+    "oracao": "Deus, me ensina a confiar mais em Ti."
+  },
+  {
+    "tema": "Fé",
+    "nivel": "Iniciante",
+    "versiculo": "Romanos 10:17",
+    "texto": "A fé vem pelo ouvir...",
+    "reflexao": "A fé começa com pequenos passos de confiança em Deus.",
+    "pergunta": "Como você pode fortalecer sua fé hoje?",
+    "oracao": "Senhor, fortalece minha fé todos os dias."
+  },
+  {
+    "tema": "Fé",
+    "nivel": "Intermediário",
+    "versiculo": "Romanos 10:17",
+    "texto": "A fé vem pelo ouvir...",
+    "reflexao": "Crer em Deus nos sustenta em momentos difíceis.",
+    "pergunta": "O que está desafiando sua fé neste momento?",
+    "oracao": "Senhor, fortalece minha fé todos os dias."
+  },
+  {
+    "tema": "Fé",
+    "nivel": "Avançado",
+    "versiculo": "Romanos 10:17",
+    "texto": "A fé vem pelo ouvir...",
+    "reflexao": "A fé verdadeira permanece firme independente das circunstâncias.",
+    "pergunta": "O que está desafiando sua fé neste momento?",
+    "oracao": "Senhor, fortalece minha fé todos os dias."
+  },
+  {
+    "tema": "Fé",
+    "nivel": "Iniciante",
+    "versiculo": "2 Coríntios 5:7",
+    "texto": "Vivemos por fé...",
+    "reflexao": "Mesmo sem ver, confiar em Deus é o início da fé.",
+    "pergunta": "Onde você precisa confiar mais em Deus hoje?",
+    "oracao": "Senhor, fortalece minha fé todos os dias."
+  },
+  {
+    "tema": "Fé",
+    "nivel": "Intermediário",
+    "versiculo": "2 Coríntios 5:7",
+    "texto": "Vivemos por fé...",
+    "reflexao": "Crer em Deus nos sustenta em momentos difíceis.",
+    "pergunta": "Como você pode fortalecer sua fé hoje?",
+    "oracao": "Senhor, fortalece minha fé todos os dias."
+  },
+  {
+    "tema": "Fé",
+    "nivel": "Avançado",
+    "versiculo": "2 Coríntios 5:7",
+    "texto": "Vivemos por fé...",
+    "reflexao": "Confiar em Deus acima de tudo revela maturidade espiritual.",
+    "pergunta": "Como você pode fortalecer sua fé hoje?",
+    "oracao": "Deus, me ensina a confiar mais em Ti."
+  },
+  {
+    "tema": "Fé",
+    "nivel": "Iniciante",
+    "versiculo": "Marcos 11:24",
+    "texto": "Tudo o que pedirem em oração...",
+    "reflexao": "Mesmo sem ver, confiar em Deus é o início da fé.",
+    "pergunta": "Onde você precisa confiar mais em Deus hoje?",
+    "oracao": "Senhor, fortalece minha fé todos os dias."
+  },
+  {
+    "tema": "Fé",
+    "nivel": "Intermediário",
+    "versiculo": "Marcos 11:24",
+    "texto": "Tudo o que pedirem em oração...",
+    "reflexao": "A fé cresce quando confiamos em Deus nas dificuldades.",
+    "pergunta": "O que está desafiando sua fé neste momento?",
+    "oracao": "Deus, me ensina a confiar mais em Ti."
+  },
+  {
+    "tema": "Fé",
+    "nivel": "Avançado",
+    "versiculo": "Marcos 11:24",
+    "texto": "Tudo o que pedirem em oração...",
+    "reflexao": "A fé verdadeira permanece firme independente das circunstâncias.",
+    "pergunta": "Onde você precisa confiar mais em Deus hoje?",
+    "oracao": "Senhor, fortalece minha fé todos os dias."
   },
   {
     "tema": "Ansiedade",
     "nivel": "Iniciante",
     "versiculo": "Filipenses 4:6",
-    "texto": "Não andem ansiosos por coisa alguma.",
-    "reflexao": "Deus nos ensina sobre ansiedade através da Sua Palavra. Pequenos passos de fé transformam nossa caminhada.",
-    "pergunta": "Como você pode viver ansiedade de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver ansiedade diariamente segundo a Tua vontade."
+    "texto": "Não andem ansiosos...",
+    "reflexao": "Deus cuida de você, então não carregue tudo sozinho.",
+    "pergunta": "O que está te causando ansiedade hoje?",
+    "oracao": "Pai, eu entrego minhas preocupações a Ti."
   },
   {
     "tema": "Ansiedade",
     "nivel": "Intermediário",
     "versiculo": "Filipenses 4:6",
-    "texto": "Não andem ansiosos por coisa alguma.",
-    "reflexao": "O crescimento espiritual exige prática diária de ansiedade. Deus trabalha em nós mesmo nas dificuldades.",
-    "pergunta": "Como você pode viver ansiedade de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver ansiedade diariamente segundo a Tua vontade."
+    "texto": "Não andem ansiosos...",
+    "reflexao": "A paz começa quando entregamos o controle.",
+    "pergunta": "Você já entregou suas preocupações a Deus?",
+    "oracao": "Senhor, tira minha ansiedade e me dá paz."
   },
   {
     "tema": "Ansiedade",
     "nivel": "Avançado",
     "versiculo": "Filipenses 4:6",
-    "texto": "Não andem ansiosos por coisa alguma.",
-    "reflexao": "A maturidade espiritual revela que ansiedade não depende das circunstâncias, mas da confiança constante em Deus.",
-    "pergunta": "Como você pode viver ansiedade de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver ansiedade diariamente segundo a Tua vontade."
+    "texto": "Não andem ansiosos...",
+    "reflexao": "Quem confia em Deus vive com menos medo.",
+    "pergunta": "O que está te causando ansiedade hoje?",
+    "oracao": "Deus, acalma meu coração."
+  },
+  {
+    "tema": "Ansiedade",
+    "nivel": "Iniciante",
+    "versiculo": "1 Pedro 5:7",
+    "texto": "Lancem sobre Ele...",
+    "reflexao": "Deus cuida de você, então não carregue tudo sozinho.",
+    "pergunta": "Como você pode confiar mais em Deus hoje?",
+    "oracao": "Pai, eu entrego minhas preocupações a Ti."
+  },
+  {
+    "tema": "Ansiedade",
+    "nivel": "Intermediário",
+    "versiculo": "1 Pedro 5:7",
+    "texto": "Lancem sobre Ele...",
+    "reflexao": "A paz começa quando entregamos o controle.",
+    "pergunta": "O que está te causando ansiedade hoje?",
+    "oracao": "Senhor, tira minha ansiedade e me dá paz."
+  },
+  {
+    "tema": "Ansiedade",
+    "nivel": "Avançado",
+    "versiculo": "1 Pedro 5:7",
+    "texto": "Lancem sobre Ele...",
+    "reflexao": "Quem confia em Deus vive com menos medo.",
+    "pergunta": "Como você pode confiar mais em Deus hoje?",
+    "oracao": "Senhor, tira minha ansiedade e me dá paz."
+  },
+  {
+    "tema": "Ansiedade",
+    "nivel": "Iniciante",
+    "versiculo": "Mateus 6:34",
+    "texto": "Não se preocupem...",
+    "reflexao": "Deus quer te dar paz em meio ao caos.",
+    "pergunta": "Você já entregou suas preocupações a Deus?",
+    "oracao": "Senhor, tira minha ansiedade e me dá paz."
+  },
+  {
+    "tema": "Ansiedade",
+    "nivel": "Intermediário",
+    "versiculo": "Mateus 6:34",
+    "texto": "Não se preocupem...",
+    "reflexao": "A paz começa quando entregamos o controle.",
+    "pergunta": "Você já entregou suas preocupações a Deus?",
+    "oracao": "Deus, acalma meu coração."
+  },
+  {
+    "tema": "Ansiedade",
+    "nivel": "Avançado",
+    "versiculo": "Mateus 6:34",
+    "texto": "Não se preocupem...",
+    "reflexao": "Quem confia em Deus vive com menos medo.",
+    "pergunta": "Como você pode confiar mais em Deus hoje?",
+    "oracao": "Pai, eu entrego minhas preocupações a Ti."
   },
   {
     "tema": "Perdão",
     "nivel": "Iniciante",
     "versiculo": "Efésios 4:32",
-    "texto": "Sejam bondosos e compassivos uns para com os outros.",
-    "reflexao": "Deus nos ensina sobre perdão através da Sua Palavra. Pequenos passos de fé transformam nossa caminhada.",
-    "pergunta": "Como você pode viver perdão de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver perdão diariamente segundo a Tua vontade."
+    "texto": "Sejam bondosos...",
+    "reflexao": "Guardar mágoa só machuca você.",
+    "pergunta": "O que está te impedindo de perdoar?",
+    "oracao": "Senhor, me ajuda a perdoar de verdade."
   },
   {
     "tema": "Perdão",
     "nivel": "Intermediário",
     "versiculo": "Efésios 4:32",
-    "texto": "Sejam bondosos e compassivos uns para com os outros.",
-    "reflexao": "O crescimento espiritual exige prática diária de perdão. Deus trabalha em nós mesmo nas dificuldades.",
-    "pergunta": "Como você pode viver perdão de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver perdão diariamente segundo a Tua vontade."
+    "texto": "Sejam bondosos...",
+    "reflexao": "Quem perdoa vive mais leve.",
+    "pergunta": "Existe alguém que você precisa perdoar?",
+    "oracao": "Deus, tira toda mágoa do meu coração."
   },
   {
     "tema": "Perdão",
     "nivel": "Avançado",
     "versiculo": "Efésios 4:32",
-    "texto": "Sejam bondosos e compassivos uns para com os outros.",
-    "reflexao": "A maturidade espiritual revela que perdão não depende das circunstâncias, mas da confiança constante em Deus.",
-    "pergunta": "Como você pode viver perdão de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver perdão diariamente segundo a Tua vontade."
+    "texto": "Sejam bondosos...",
+    "reflexao": "Perdoar profundamente reflete o amor de Cristo.",
+    "pergunta": "O que está te impedindo de perdoar?",
+    "oracao": "Pai, me ensina a perdoar como Tu perdoas."
+  },
+  {
+    "tema": "Perdão",
+    "nivel": "Iniciante",
+    "versiculo": "Colossenses 3:13",
+    "texto": "Perdoem uns aos outros...",
+    "reflexao": "Guardar mágoa só machuca você.",
+    "pergunta": "O que está te impedindo de perdoar?",
+    "oracao": "Pai, me ensina a perdoar como Tu perdoas."
+  },
+  {
+    "tema": "Perdão",
+    "nivel": "Intermediário",
+    "versiculo": "Colossenses 3:13",
+    "texto": "Perdoem uns aos outros...",
+    "reflexao": "Perdoar é difícil, mas transforma o coração.",
+    "pergunta": "O que está te impedindo de perdoar?",
+    "oracao": "Senhor, me ajuda a perdoar de verdade."
+  },
+  {
+    "tema": "Perdão",
+    "nivel": "Avançado",
+    "versiculo": "Colossenses 3:13",
+    "texto": "Perdoem uns aos outros...",
+    "reflexao": "Liberar perdão é viver como Jesus ensinou.",
+    "pergunta": "O que está te impedindo de perdoar?",
+    "oracao": "Deus, tira toda mágoa do meu coração."
+  },
+  {
+    "tema": "Perdão",
+    "nivel": "Iniciante",
+    "versiculo": "Lucas 6:37",
+    "texto": "Perdoem, e serão perdoados.",
+    "reflexao": "Deus nos ensina a perdoar sempre.",
+    "pergunta": "O que está te impedindo de perdoar?",
+    "oracao": "Pai, me ensina a perdoar como Tu perdoas."
+  },
+  {
+    "tema": "Perdão",
+    "nivel": "Intermediário",
+    "versiculo": "Lucas 6:37",
+    "texto": "Perdoem, e serão perdoados.",
+    "reflexao": "O perdão nos aproxima de Deus.",
+    "pergunta": "O que está te impedindo de perdoar?",
+    "oracao": "Deus, tira toda mágoa do meu coração."
+  },
+  {
+    "tema": "Perdão",
+    "nivel": "Avançado",
+    "versiculo": "Lucas 6:37",
+    "texto": "Perdoem, e serão perdoados.",
+    "reflexao": "Liberar perdão é viver como Jesus ensinou.",
+    "pergunta": "O que está te impedindo de perdoar?",
+    "oracao": "Senhor, me ajuda a perdoar de verdade."
   },
   {
     "tema": "Propósito",
     "nivel": "Iniciante",
     "versiculo": "Jeremias 29:11",
-    "texto": "Porque eu sei os planos que tenho para vocês, diz o Senhor.",
-    "reflexao": "Deus nos ensina sobre propósito através da Sua Palavra. Pequenos passos de fé transformam nossa caminhada.",
-    "pergunta": "Como você pode viver propósito de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver propósito diariamente segundo a Tua vontade."
+    "texto": "Eu sei os planos...",
+    "reflexao": "Deus está guiando seus passos.",
+    "pergunta": "Você está vivendo o propósito de Deus?",
+    "oracao": "Senhor, mostra-me meu propósito."
   },
   {
     "tema": "Propósito",
     "nivel": "Intermediário",
     "versiculo": "Jeremias 29:11",
-    "texto": "Porque eu sei os planos que tenho para vocês, diz o Senhor.",
-    "reflexao": "O crescimento espiritual exige prática diária de propósito. Deus trabalha em nós mesmo nas dificuldades.",
-    "pergunta": "Como você pode viver propósito de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver propósito diariamente segundo a Tua vontade."
+    "texto": "Eu sei os planos...",
+    "reflexao": "Descobrir o propósito exige confiar em Deus.",
+    "pergunta": "O que Deus está te chamando para fazer?",
+    "oracao": "Deus, guia meus passos."
   },
   {
     "tema": "Propósito",
     "nivel": "Avançado",
     "versiculo": "Jeremias 29:11",
-    "texto": "Porque eu sei os planos que tenho para vocês, diz o Senhor.",
-    "reflexao": "A maturidade espiritual revela que propósito não depende das circunstâncias, mas da confiança constante em Deus.",
-    "pergunta": "Como você pode viver propósito de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver propósito diariamente segundo a Tua vontade."
+    "texto": "Eu sei os planos...",
+    "reflexao": "Viver o propósito é alinhar-se com Deus.",
+    "pergunta": "Você está vivendo o propósito de Deus?",
+    "oracao": "Deus, guia meus passos."
   },
   {
-    "tema": "Força",
+    "tema": "Propósito",
     "nivel": "Iniciante",
-    "versiculo": "Isaías 40:30",
-    "texto": "Os jovens se cansam e se fatigam, e os moços de exaustos caem.",
-    "reflexao": "Deus nos ensina sobre força através da Sua Palavra. Pequenos passos de fé transformam nossa caminhada.",
-    "pergunta": "Como você pode viver força de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver força diariamente segundo a Tua vontade."
+    "versiculo": "Romanos 8:28",
+    "texto": "Tudo coopera...",
+    "reflexao": "Deus tem um plano para sua vida.",
+    "pergunta": "O que Deus está te chamando para fazer?",
+    "oracao": "Senhor, mostra-me meu propósito."
   },
   {
-    "tema": "Força",
+    "tema": "Propósito",
     "nivel": "Intermediário",
-    "versiculo": "Isaías 40:30",
-    "texto": "Os jovens se cansam e se fatigam, e os moços de exaustos caem.",
-    "reflexao": "O crescimento espiritual exige prática diária de força. Deus trabalha em nós mesmo nas dificuldades.",
-    "pergunta": "Como você pode viver força de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver força diariamente segundo a Tua vontade."
+    "versiculo": "Romanos 8:28",
+    "texto": "Tudo coopera...",
+    "reflexao": "Cada fase faz parte do plano de Deus.",
+    "pergunta": "Como você pode se alinhar com Deus hoje?",
+    "oracao": "Deus, guia meus passos."
   },
   {
-    "tema": "Força",
+    "tema": "Propósito",
     "nivel": "Avançado",
-    "versiculo": "Isaías 40:30",
-    "texto": "Os jovens se cansam e se fatigam, e os moços de exaustos caem.",
-    "reflexao": "A maturidade espiritual revela que força não depende das circunstâncias, mas da confiança constante em Deus.",
-    "pergunta": "Como você pode viver força de forma prática hoje?",
-    "oracao": "Senhor, ajuda-me a viver força diariamente segundo a Tua vontade."
+    "versiculo": "Romanos 8:28",
+    "texto": "Tudo coopera...",
+    "reflexao": "O propósito se revela na obediência.",
+    "pergunta": "Você está vivendo o propósito de Deus?",
+    "oracao": "Senhor, mostra-me meu propósito."
+  },
+  {
+    "tema": "Propósito",
+    "nivel": "Iniciante",
+    "versiculo": "Efésios 2:10",
+    "texto": "Somos criação de Deus...",
+    "reflexao": "Deus tem um plano para sua vida.",
+    "pergunta": "Como você pode se alinhar com Deus hoje?",
+    "oracao": "Senhor, mostra-me meu propósito."
+  },
+  {
+    "tema": "Propósito",
+    "nivel": "Intermediário",
+    "versiculo": "Efésios 2:10",
+    "texto": "Somos criação de Deus...",
+    "reflexao": "Deus trabalha mesmo quando você não entende.",
+    "pergunta": "Como você pode se alinhar com Deus hoje?",
+    "oracao": "Senhor, mostra-me meu propósito."
+  },
+  {
+    "tema": "Propósito",
+    "nivel": "Avançado",
+    "versiculo": "Efésios 2:10",
+    "texto": "Somos criação de Deus...",
+    "reflexao": "Deus cumpre Seus planos no tempo certo.",
+    "pergunta": "Você está vivendo o propósito de Deus?",
+    "oracao": "Pai, quero viver Teus planos."
   }
 ]
