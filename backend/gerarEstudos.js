@@ -2,117 +2,30 @@ const fs = require("fs");
 const path = require("path");
 
 // ===============================
-// BASE DE VERSETOS (expandida)
+// BASE DE VERSETOS
 // ===============================
 const versiculosBase = [
 
   // ================= FÉ =================
-  {
-    tema: "Fé",
-    versiculo: "Hebreus 11:1",
-    texto: "Ora, a fé é a certeza daquilo que esperamos e a prova das coisas que não vemos."
-  },
-  {
-    tema: "Fé",
-    versiculo: "Romanos 10:17",
-    texto: "A fé vem pelo ouvir, e o ouvir pela palavra de Deus."
-  },
-  {
-    tema: "Fé",
-    versiculo: "2 Coríntios 5:7",
-    texto: "Porque vivemos por fé, e não pelo que vemos."
-  },
-  {
-    tema: "Fé",
-    versiculo: "Mateus 17:20",
-    texto: "Se vocês tiverem fé do tamanho de um grão de mostarda..."
-  },
-  {
-    tema: "Fé",
-    versiculo: "Marcos 11:24",
-    texto: "Tudo o que vocês pedirem em oração, creiam que já o receberam."
-  },
+  { tema: "Fé", versiculo: "Hebreus 11:1", texto: "A fé é a certeza daquilo que esperamos..." },
+  { tema: "Fé", versiculo: "Romanos 10:17", texto: "A fé vem pelo ouvir..." },
+  { tema: "Fé", versiculo: "2 Coríntios 5:7", texto: "Vivemos por fé..." },
+  { tema: "Fé", versiculo: "Marcos 11:24", texto: "Tudo o que pedirem em oração..." },
 
   // ================= ANSIEDADE =================
-  {
-    tema: "Ansiedade",
-    versiculo: "Filipenses 4:6-7",
-    texto: "Não andem ansiosos por coisa alguma, mas em tudo, pela oração..."
-  },
-  {
-    tema: "Ansiedade",
-    versiculo: "1 Pedro 5:7",
-    texto: "Lancem sobre ele toda a sua ansiedade, porque ele tem cuidado de vocês."
-  },
-  {
-    tema: "Ansiedade",
-    versiculo: "Mateus 6:34",
-    texto: "Portanto, não se preocupem com o amanhã."
-  },
-  {
-    tema: "Ansiedade",
-    versiculo: "Salmos 55:22",
-    texto: "Entregue suas preocupações ao Senhor, e ele o susterá."
-  },
-  {
-    tema: "Ansiedade",
-    versiculo: "João 14:27",
-    texto: "Deixo-lhes a paz; a minha paz lhes dou."
-  },
+  { tema: "Ansiedade", versiculo: "Filipenses 4:6", texto: "Não andem ansiosos..." },
+  { tema: "Ansiedade", versiculo: "1 Pedro 5:7", texto: "Lancem sobre Ele..." },
+  { tema: "Ansiedade", versiculo: "Mateus 6:34", texto: "Não se preocupem..." },
 
   // ================= PERDÃO =================
-  {
-    tema: "Perdão",
-    versiculo: "Efésios 4:32",
-    texto: "Sejam bondosos e compassivos uns para com os outros."
-  },
-  {
-    tema: "Perdão",
-    versiculo: "Colossenses 3:13",
-    texto: "Perdoem como o Senhor lhes perdoou."
-  },
-  {
-    tema: "Perdão",
-    versiculo: "Mateus 6:14",
-    texto: "Se vocês perdoarem as pessoas..."
-  },
-  {
-    tema: "Perdão",
-    versiculo: "Lucas 6:37",
-    texto: "Perdoem, e serão perdoados."
-  },
-  {
-    tema: "Perdão",
-    versiculo: "1 João 1:9",
-    texto: "Se confessarmos os nossos pecados, ele é fiel e justo para nos perdoar."
-  },
+  { tema: "Perdão", versiculo: "Efésios 4:32", texto: "Sejam bondosos..." },
+  { tema: "Perdão", versiculo: "Colossenses 3:13", texto: "Perdoem uns aos outros..." },
+  { tema: "Perdão", versiculo: "Lucas 6:37", texto: "Perdoem, e serão perdoados." },
 
   // ================= PROPÓSITO =================
-  {
-    tema: "Propósito",
-    versiculo: "Jeremias 29:11",
-    texto: "Porque eu sei os planos que tenho para vocês, diz o Senhor."
-  },
-  {
-    tema: "Propósito",
-    versiculo: "Romanos 8:28",
-    texto: "Todas as coisas cooperam para o bem daqueles que amam a Deus."
-  },
-  {
-    tema: "Propósito",
-    versiculo: "Provérbios 19:21",
-    texto: "Muitos são os planos no coração do homem."
-  },
-  {
-    tema: "Propósito",
-    versiculo: "Efésios 2:10",
-    texto: "Somos criação de Deus realizada em Cristo Jesus."
-  },
-  {
-    tema: "Propósito",
-    versiculo: "Salmos 138:8",
-    texto: "O Senhor cumprirá o seu propósito para comigo."
-  }
+  { tema: "Propósito", versiculo: "Jeremias 29:11", texto: "Eu sei os planos..." },
+  { tema: "Propósito", versiculo: "Romanos 8:28", texto: "Tudo coopera..." },
+  { tema: "Propósito", versiculo: "Efésios 2:10", texto: "Somos criação de Deus..." }
 
 ];
 
@@ -122,25 +35,152 @@ const versiculosBase = [
 const niveis = ["Iniciante", "Intermediário", "Avançado"];
 
 // ===============================
-// GERADORES
+// BASE INTELIGENTE (VARIAÇÃO)
+// ===============================
+const banco = {
+
+  "Fé": {
+    reflexao: {
+      Iniciante: [
+        "A fé começa com pequenos passos de confiança em Deus.",
+        "Mesmo sem ver, confiar em Deus é o início da fé.",
+        "Deus nos chama a confiar nEle todos os dias."
+      ],
+      Intermediário: [
+        "A fé cresce quando confiamos em Deus nas dificuldades.",
+        "Desafios fortalecem nossa fé quando não desistimos.",
+        "Crer em Deus nos sustenta em momentos difíceis."
+      ],
+      Avançado: [
+        "A fé verdadeira permanece firme independente das circunstâncias.",
+        "Confiar em Deus acima de tudo revela maturidade espiritual.",
+        "A fé sólida não depende do que vemos, mas de quem Deus é."
+      ]
+    },
+    pergunta: [
+      "Onde você precisa confiar mais em Deus hoje?",
+      "O que está desafiando sua fé neste momento?",
+      "Como você pode fortalecer sua fé hoje?"
+    ],
+    oracao: [
+      "Senhor, fortalece minha fé todos os dias.",
+      "Deus, me ensina a confiar mais em Ti.",
+      "Pai, aumenta minha fé nas dificuldades."
+    ]
+  },
+
+  "Ansiedade": {
+    reflexao: {
+      Iniciante: [
+        "Deus cuida de você, então não carregue tudo sozinho.",
+        "Você não precisa viver preso à preocupação.",
+        "Deus quer te dar paz em meio ao caos."
+      ],
+      Intermediário: [
+        "Entregar a ansiedade a Deus é uma prática diária.",
+        "Confiar em Deus reduz o peso da ansiedade.",
+        "A paz começa quando entregamos o controle."
+      ],
+      Avançado: [
+        "A paz de Deus supera qualquer ansiedade.",
+        "Descansar em Deus traz equilíbrio ao coração.",
+        "Quem confia em Deus vive com menos medo."
+      ]
+    },
+    pergunta: [
+      "O que está te causando ansiedade hoje?",
+      "Você já entregou suas preocupações a Deus?",
+      "Como você pode confiar mais em Deus hoje?"
+    ],
+    oracao: [
+      "Senhor, tira minha ansiedade e me dá paz.",
+      "Deus, acalma meu coração.",
+      "Pai, eu entrego minhas preocupações a Ti."
+    ]
+  },
+
+  "Perdão": {
+    reflexao: {
+      Iniciante: [
+        "Perdoar é uma escolha que traz liberdade.",
+        "Guardar mágoa só machuca você.",
+        "Deus nos ensina a perdoar sempre."
+      ],
+      Intermediário: [
+        "O perdão nos aproxima de Deus.",
+        "Perdoar é difícil, mas transforma o coração.",
+        "Quem perdoa vive mais leve."
+      ],
+      Avançado: [
+        "Perdoar profundamente reflete o amor de Cristo.",
+        "O perdão é sinal de maturidade espiritual.",
+        "Liberar perdão é viver como Jesus ensinou."
+      ]
+    },
+    pergunta: [
+      "Existe alguém que você precisa perdoar?",
+      "O que está te impedindo de perdoar?",
+      "Como você pode liberar perdão hoje?"
+    ],
+    oracao: [
+      "Senhor, me ajuda a perdoar de verdade.",
+      "Deus, tira toda mágoa do meu coração.",
+      "Pai, me ensina a perdoar como Tu perdoas."
+    ]
+  },
+
+  "Propósito": {
+    reflexao: {
+      Iniciante: [
+        "Deus tem um plano para sua vida.",
+        "Sua vida tem valor e direção em Deus.",
+        "Deus está guiando seus passos."
+      ],
+      Intermediário: [
+        "Descobrir o propósito exige confiar em Deus.",
+        "Cada fase faz parte do plano de Deus.",
+        "Deus trabalha mesmo quando você não entende."
+      ],
+      Avançado: [
+        "Viver o propósito é alinhar-se com Deus.",
+        "O propósito se revela na obediência.",
+        "Deus cumpre Seus planos no tempo certo."
+      ]
+    },
+    pergunta: [
+      "Você está vivendo o propósito de Deus?",
+      "O que Deus está te chamando para fazer?",
+      "Como você pode se alinhar com Deus hoje?"
+    ],
+    oracao: [
+      "Senhor, mostra-me meu propósito.",
+      "Deus, guia meus passos.",
+      "Pai, quero viver Teus planos."
+    ]
+  }
+
+};
+
+// ===============================
+// FUNÇÃO ALEATÓRIA
+// ===============================
+function pegarAleatorio(lista) {
+  return lista[Math.floor(Math.random() * lista.length)];
+}
+
+// ===============================
+// GERADORES INTELIGENTES
 // ===============================
 function gerarReflexao(tema, nivel) {
-
-  if (nivel === "Iniciante")
-    return `Deus nos ensina sobre ${tema.toLowerCase()} através da Sua Palavra. Pequenos passos transformam nossa caminhada.`;
-
-  if (nivel === "Intermediário")
-    return `O crescimento espiritual exige prática diária de ${tema.toLowerCase()}. Deus trabalha em nós mesmo nas dificuldades.`;
-
-  return `A maturidade espiritual revela que ${tema.toLowerCase()} não depende das circunstâncias, mas da confiança em Deus.`;
+  return pegarAleatorio(banco[tema].reflexao[nivel]);
 }
 
 function gerarPergunta(tema) {
-  return `Como você pode viver ${tema.toLowerCase()} de forma prática hoje?`;
+  return pegarAleatorio(banco[tema].pergunta);
 }
 
 function gerarOracao(tema) {
-  return `Senhor, ajuda-me a viver ${tema.toLowerCase()} diariamente segundo a Tua vontade.`;
+  return pegarAleatorio(banco[tema].oracao);
 }
 
 // ===============================
@@ -149,7 +189,6 @@ function gerarOracao(tema) {
 const estudosGerados = [];
 
 versiculosBase.forEach(v => {
-
   niveis.forEach(nivel => {
 
     estudosGerados.push({
@@ -163,7 +202,6 @@ versiculosBase.forEach(v => {
     });
 
   });
-
 });
 
 // ===============================
@@ -177,5 +215,5 @@ fs.writeFileSync(
   "utf8"
 );
 
-console.log("✅ Estudos gerados com sucesso!");
+console.log("🔥 Estudos gerados com VARIAÇÃO!");
 console.log(`Total criado: ${estudosGerados.length}`);
