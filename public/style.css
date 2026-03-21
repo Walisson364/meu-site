@@ -415,3 +415,13 @@ body.auth-page {
 .logout-btn:hover{
   background:#dc2626;
 }
+
+body {
+  padding: 10px;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+}

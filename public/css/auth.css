@@ -140,3 +140,13 @@ body{
   justify-content:center;
   align-items:center;
 }
+
+body {
+  padding: 10px;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+}
