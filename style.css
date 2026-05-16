@@ -170,7 +170,7 @@ footer {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    opacity: 0.72;
+    opacity: 0.95;
     z-index: 0;
 }
 
@@ -235,6 +235,81 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+}
+
+.dev-console {
+    width: min(100%, 620px);
+    margin-top: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(124, 243, 212, 0.28);
+    border-radius: 16px;
+    background:
+        linear-gradient(135deg, rgba(61, 214, 198, 0.12), rgba(255, 184, 107, 0.07)),
+        rgba(5, 8, 12, 0.86);
+    box-shadow: 0 22px 70px rgba(0, 0, 0, 0.32);
+}
+
+body.light-theme .dev-console {
+    background:
+        linear-gradient(135deg, rgba(15, 159, 145, 0.14), rgba(200, 112, 37, 0.08)),
+        rgba(255, 255, 255, 0.9);
+}
+
+.console-top {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    height: 34px;
+    padding: 0 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.console-top span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.console-top span:first-child {
+    background: #ff6b6b;
+}
+
+.console-top span:nth-child(2) {
+    background: var(--orange);
+}
+
+.console-top span:nth-child(3) {
+    background: var(--accent);
+}
+
+.console-lines {
+    padding: 18px;
+}
+
+.console-lines p {
+    margin: 0;
+    color: var(--muted);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: clamp(13px, 1.8vw, 15px);
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.console-lines span {
+    color: var(--accent-strong);
+    font-weight: 800;
+}
+
+.typing-line::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 1.1em;
+    margin-left: 4px;
+    vertical-align: -0.2em;
+    background: var(--accent);
+    animation: cursorBlink 900ms steps(2, start) infinite;
 }
 
 .button {
@@ -710,6 +785,18 @@ footer {
     }
 }
 
+@keyframes cursorBlink {
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    46%,
+    100% {
+        opacity: 0;
+    }
+}
+
 @media (max-width: 860px) {
     .site-header,
     main,
@@ -799,9 +886,14 @@ footer {
     }
 
     .hero-panel,
+    .dev-console,
     .project-card {
         border-radius: 14px;
         padding: 20px;
+    }
+
+    .dev-console {
+        padding: 0;
     }
 
     .project-showcase {

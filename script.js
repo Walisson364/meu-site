@@ -74,14 +74,14 @@ if (heroCanvas && heroSection && !reduceMotion.matches) {
 
     const createParticles = () => {
         const isSmallScreen = window.innerWidth < 720;
-        const count = isSmallScreen ? 26 : 58;
+        const count = isSmallScreen ? 34 : 78;
 
         particles = Array.from({ length: count }, () => ({
             x: Math.random() * width,
             y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 0.28,
-            vy: (Math.random() - 0.5) * 0.28,
-            size: Math.random() * 1.8 + 0.8
+            vx: (Math.random() - 0.5) * 0.36,
+            vy: (Math.random() - 0.5) * 0.36,
+            size: Math.random() * 2.4 + 1
         }));
     };
 
@@ -116,7 +116,7 @@ if (heroCanvas && heroSection && !reduceMotion.matches) {
             if (particle.x < 0 || particle.x > width) particle.vx *= -1;
             if (particle.y < 0 || particle.y > height) particle.vy *= -1;
 
-            context.fillStyle = "rgba(124, 243, 212, 0.78)";
+            context.fillStyle = "rgba(124, 243, 212, 0.92)";
             context.beginPath();
             context.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
             context.fill();
@@ -125,16 +125,16 @@ if (heroCanvas && heroSection && !reduceMotion.matches) {
                 const next = particles[nextIndex];
                 const distance = Math.hypot(particle.x - next.x, particle.y - next.y);
 
-                if (distance < 118) {
-                    drawLine(particle, next, (1 - distance / 118) * 0.16);
+                if (distance < 130) {
+                    drawLine(particle, next, (1 - distance / 130) * 0.28);
                 }
             }
 
             if (pointer.active) {
                 const pointerDistance = Math.hypot(particle.x - pointer.x, particle.y - pointer.y);
 
-                if (pointerDistance < 150) {
-                    drawLine(particle, pointer, (1 - pointerDistance / 150) * 0.28);
+                if (pointerDistance < 170) {
+                    drawLine(particle, pointer, (1 - pointerDistance / 170) * 0.44);
                 }
             }
         });
