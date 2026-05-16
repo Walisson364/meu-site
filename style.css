@@ -422,6 +422,11 @@ body.light-theme .dev-console {
     display: block;
 }
 
+.project-list {
+    display: grid;
+    gap: 26px;
+}
+
 .services {
     display: block;
 }
